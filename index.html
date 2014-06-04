@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pikamaze</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+	<link href="color/default.css" rel="stylesheet" media="screen">
+	<script src="js/modernizr.custom.js"></script>
+  </head>
+  <body>
+
+  	<!-- Menu -->
+	  <div class="menu-area">
+			<div id="dl-menu" class="dl-menuwrapper">
+					<button class="dl-trigger">Ouvrir Menu</button>
+					<ul class="dl-menu">
+						<li><a href="#intro">Accueil</a></li>
+						<li><a href="#jeu">Jeu</a></li>
+						<li><a href="#regles">Règles</a></li>
+						<li><a href="#pokedex">Pokédex</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+			</div>
+	  </div>
+
+	  <!-- Logo -->
+	  <div id="intro"></div>	
+
+	  <!-- Jeu -->
+	  <section id="jeu" class="home-section bg-white">
+		<div class="container">
+			  <div class="row">
+				  <div class="col-md-offset-2 col-md-8">
+					<div class="section-heading">
+					 <h2>Jouez</h2>
+					 <p> Incarnez le plus grand dresseur pokémon et attrapez les tous !</p>
+					</div>
+				  </div>
+			  </div>
+
+              <div class="row">
+                  <table id="maze"></table>
+                  <div class="boutons">
+                      <button id="solve">Résoudre</button>
+                      <button id="reset">Recommencer</button>
+                  </div>
+
+                  <table id="catalog"></table>
+
+              </div>
+		  </div>	  
+	  </section>
+
+	 <!-- Règles du jeu-->
+	 <section id="regles" class="home-section bg-dark">
+		<div class="container">
+			  <div class="row">
+				  <div class="col-md-offset-2 col-md-8">
+					<div class="section-heading">
+					    <h2>Règles</h2>
+                        <p id="text"> Pikamaze, le nouveau jeu de labyrinthe dérivé du monde de Pokémon.</p>
+                        <p id="text">Notre dresseur préféré, Sacha, se retrouve perdu au milieu d'un labyrinthe duquel il devra sortir, tout en attapant le plus de pokémons possible. </p>
+                        <p id="text">Pour cela, il vous suffira de déplacer Sacha jusqu'à la case d'arrivée, à l’aide des touches directionnelles : Z (haut), D (droite), S (bas) Q (gauche).</p>
+                        <p id="text">Sur la case d'arrivée de chaque labyrinthe figure un Pokémon. En passant sur la case Sacha attrapera le pokémon qui sera directement placé dans la pokéball qui s’affiche en bas de l’écran. Grâce a votre aide Sacha doit parfaire sa collection et capturer le plus de pokemons possible.</p>
+                        <p id="text">A vous de jouer, avec Pikamaze attrapez les tous ! </p>
+                    </div>
+                  </div>
+		      </div>
+        </div>
+	</section>
+
+	<!-- Pokédex -->
+	<section id="pokedex" class="home-section bg-gray">
+			<div class="container">
+			  <div class="row">
+				  <div class="col-md-offset-2 col-md-8">
+					<div class="section-heading">
+					 <h2>Pokédex</h2>
+					 <p>Apprenez en un peu plus sur vos pokémon préférés grâce au pokédex.</p>
+					</div>
+				  </div>
+			  </div>
+				<div class="row">
+					<div class="col-md-offset-2 col-md-8">
+					
+					<ul class="lb-album">
+						<li>
+							<a href="#image-1">
+								<img src="img/pokedex/pikachu.png" alt="">
+								<span>+</span>
+							</a>
+							<div class="lb-overlay" id="image-1">
+								<a href="#page" class="lb-close">X</a>
+								<img src="img/pokedex/pikachu.png" alt="" />
+								<div>
+									<h3>Pikachu</h3>
+									<p>Pikachu est un pokémon souris de type électic apparu dès la première génération. En tant que partenaire de Sacha, héros du dessin animé tiré du jeu, il est le plus célèbre des Pokémon et la mascotte officielle de la licence. <a href="http://www.pokepedia.fr/index.php/Pikachu">En savoir +</a> </p>
+								</div>
+								
+							</div>
+						</li>
+						<li>
+							<a href="#image-2">
+								<img src="img/pokedex/bulbizard.png" alt="">
+								<span>+</span>
+							</a>
+							<div class="lb-overlay" id="image-2">
+								<a href="#page" class="lb-close">x Close</a>
+								<img src="img/pokedex/bulbizard.png" alt="" />
+								<div>
+									<h3>Bulbizarre</h3>
+									<p>Bulbizarre est le tout premier Pokémon de la liste nationale. C’est également le Pokémon de départ plante est le tout premier Pokémon de la liste nationale. C’est également le Pokémon de départ. <a href="http://www.pokepedia.fr/index.php/Bulbizarre">En savoir +</a></p>
+								</div>
+								
+							</div>
+						</li>
+						<li>
+							<a href="#image-3">
+								<img src="img/pokedex/carapuce.png" alt="">
+								<span>+</span>
+							</a>
+							<div class="lb-overlay" id="image-3">
+								<a href="#page" class="lb-close">x Close</a>
+								<img src="img/pokedex/carapuce.png" alt="" />
+								<div>
+									<h3>Carapuce</h3>
+									<p>Les bébés Carapuce sont extrêmement vulnérables à la naissance, car leur carapace est toute molle. C'est pourquoi ils boivent régulièrement une eau riche en minéraux. Elle devient ensuite dure comme de la pierre. S'il est menacé, il se réfugie à l'intérieur et envoie un jet d'eau à son agresseur. <a href="http://www.pokepedia.fr/index.php/Carapuce">En savoir +</a></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#image-4">
+								<img src="img/pokedex/abra.png" alt="">
+								<span>+</span>
+							</a>
+							<div class="lb-overlay" id="image-4">
+								<a href="#page" class="lb-close">x Close</a>
+								<img src="img/pokedex/abra.png" alt="" />
+								<div>
+									<h3>Abra/</h3>
+									<p>Abra dort dix-huit heures par jour, mais pourtant, même éveillé, ses yeux restent fermés. Des dresseurs d'Abra affirment que les rares fois où ils ouvrent leurs yeux, ceux-ci sont entièrement rouges. Il peut sentir à n'importe quel moment quand il est en danger, et se téléporte pour se mettre en lieu sûr. <a href="http://www.pokepedia.fr/index.php/Abra">En savoir +</a></p>
+								</div>
+								
+							</div>
+						</li>
+						<li>
+							<a href="#image-5">
+								<img src="img/pokedex/psykokwak.png" alt="">
+								<span>+</span>
+							</a>
+							<div class="lb-overlay" id="image-5">
+								<a href="#page" class="lb-close">X</a>
+								<img src="img/pokedex/psykokwak.png" alt="" />
+								<div>
+									<h3>Psykokwak</h3>
+									<p>Psykokwak est un étrange Pokémon mi-aquatique, mi-psy. Ce pauvre Pokémon a la migraine en permanence, et quand celle-ci atteint son paroxysme, il utilise de puissants pouvoirs psy sans s'en rendre compte. Il maîtrise alors l'attaque Choc mental avec perfection. <a href="http://www.pokepedia.fr/index.php/Psykokwak">En savoir +</a></p>
+								</div>
+								
+							</div>
+						</li>
+						<li>
+							<a href="#image-6">
+								<img src="img/pokedex/rondoudou.png" alt="">
+								<span>+</span>
+							</a>
+							<div class="lb-overlay" id="image-6">
+								<a href="#page" class="lb-close">x Close</a>
+								<img src="img/pokedex/rondoudou.png" alt="" />
+								<div>
+									<h3>Rondoudou</h3>
+									<p>Rondoudou ne peut pas s'empêcher de chanter. S'il se fait agresser, il entame une berceuse qui endort immédiatement son ennemi, et en profite pour prendre la fuite en roulant. Quand il chante, ses oreilles son automatiquement bouchées car sinon, il s'endormirait lui-même. <a href="http://www.pokepedia.fr/index.php/Rondoudou">En savoir +</a></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href="#image-7">
+								<img src="img/pokedex/ronflex.png" alt="">
+								<span>+</span>
+							</a>
+							<div class="lb-overlay" id="image-7">
+								<a href="#page" class="lb-close">x Close</a>
+								<img src="img/pokedex/ronflex.png" alt="" />
+								<div>
+									<h3>Ronflex</h3>
+									<p>Ronflex est un Pokémon très pacifique, mais très paresseux aussi. Ses principales préoccupations de la journée sont dormir et manger. Son incroyable estomac est capable de digérer n'importe quoi, même le plus mortel des poisons. Ce Pokémon préfère faire la sieste plutôt que de se battre. <a href="http://www.pokepedia.fr/index.php/Ronflex">En savoir +</a></p>
+								</div>
+								
+							</div>
+						</li>
+						<li>
+							<a href="#image-8">
+								<img src="img/pokedex/mewtwo.png" alt="">
+								<span>+</span>
+							</a>
+							<div class="lb-overlay" id="image-8">
+								<a href="#page" class="lb-close">x Close</a>
+								<img src="img/pokedex/mewtwo.png" alt="" />
+								<div>
+									<h3>Mewtwo</h3>
+									<p>Mewtwo est un terrible Pokémon qui vient d'expériences génétiques horribles et malsaines. Créé pour le combat, il ne connaît ni la pitié, ni la défaite. Ses puissants pouvoirs psychiques peuvent aller jusqu'à déclencher des variations météorologiques partout dans le monde. Il est unique. <a href="http://www.pokepedia.fr/index.php/Mewtwo">En savoir +</a></p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					</div>
+				</div>
+			</div>
+		</section>	  
+	  
+	 <!-- Contact -->
+	  <section id="contact" class="home-section bg-white">
+	  	<div class="container">
+			  <div class="row">
+				  <div class="col-md-offset-2 col-md-8">
+					<div class="section-heading">
+					 <h2>Contactez nous</h2>
+					 <p>Vous recherchez des informations supplémentaire ou avez simplement repéré une erreur, contactez nous ici !</p>
+					</div>
+				  </div>
+			  </div>
+
+	  		<div class="row">
+	  			<div class="col-md-offset-1 col-md-10">
+
+				<form class="form-horizontal" role="form">
+				  <div class="form-group">
+					<div class="col-md-offset-2 col-md-8">
+					  <input type="text" class="form-control" id="inputName" placeholder="Name">
+					</div>
+				  </div>
+				  <div class="form-group">
+					<div class="col-md-offset-2 col-md-8">
+					  <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+					</div>
+				  </div>
+				  <div class="form-group">
+					<div class="col-md-offset-2 col-md-8">
+					  <input type="text" class="form-control" id="inputSubject" placeholder="Subject">
+					</div>
+				  </div>
+				  <div class="form-group">
+					<div class="col-md-offset-2 col-md-8">
+					  <textarea name="message" class="form-control" rows="3" placeholder="Message"></textarea>
+					</div>
+				  </div>
+				  <div class="form-group">
+					<div class="col-md-offset-2 col-md-8">
+					 <button type="button" class="btn btn-theme btn-lg btn-block">Send message</button>
+					</div>
+				  </div>
+				</form>
+	  			</div>	
+	  		</div>
+	  	</div>
+	  </section>  
+
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p>Copyright &copy; HETIC. All rights reserved. By Équipe 4 </p>
+				</div>
+			</div>		
+		</div>	
+	</footer>
+	 
+	 <!-- js -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.smooth-scroll.min.js"></script>
+	<script src="js/jquery.dlmenu.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/custom.js"></script>
+    <script src="js/maze.js"></script>
+  	
+</html>
